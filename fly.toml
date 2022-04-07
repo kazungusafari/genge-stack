@@ -1,4 +1,4 @@
-app = "blues-stack-template"
+app = "genge-stack-template"
 
 kill_signal = "SIGINT"
 kill_timeout = 5
@@ -7,8 +7,6 @@ processes = []
 [env]
   PORT = "8080"
 
-[deploy]
-  release_command = "npx prisma migrate deploy"
 
 [experimental]
   allowed_public_ports = []
@@ -40,12 +38,4 @@ processes = []
     restart_limit = 0
     timeout = "2s"
 
-  [[services.http_checks]]
-    interval = 10000
-    grace_period = "5s"
-    method = "get"
-    path = "/healthcheck"
-    protocol = "http"
-    timeout = 2000
-    tls_skip_verify = false
-    [services.http_checks.headers]
+ 
